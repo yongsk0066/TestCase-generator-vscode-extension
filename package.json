@@ -1,0 +1,66 @@
+{
+  "name": "dgu-extension",
+	"displayName": "dgu-extension",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.55.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onView:dgu-sidebar",
+        "onCommand:dgu-extension.helloWorld"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+			  {
+				"id": "dgu-sidebar-view",
+				"title": "Case Generator",
+				"icon": "media/logo.svg"
+			  }
+			]
+		  },
+		  "views": {
+			"dgu-sidebar-view": [
+			  {
+				"type": "webview",
+				"id": "dgu-sidebar",
+				"name": "Case Generator",
+				"icon": "media/logo.svg",
+				"contextualTitle": "Case Generator"
+			  }
+			]
+		  },
+		"commands": [
+			{
+				"command": "dgu-extension.helloWorld",
+				"title": "Hello World"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.55.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.19.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	}
+}
