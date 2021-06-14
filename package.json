@@ -11,7 +11,7 @@
 	],
 	"activationEvents": [
 		"onView:dgu-sidebar",
-        "onCommand:dgu-extension.helloWorld"
+        "onCommand:dgu-extension.testCase"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -37,8 +37,8 @@
 		  },
 		"commands": [
 			{
-				"command": "dgu-extension.helloWorld",
-				"title": "Hello World"
+				"command": "dgu-extension.testCase",
+				"title": "generate testcase"
 			}
 		]
 	},

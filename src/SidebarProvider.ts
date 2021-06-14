@@ -53,6 +53,11 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
             <title>Case Generator</title>
         </head>
         <body>
+            <b>Language</b>
+            <input/>
+            <b>Type</b>
+            <input/>
+            <b>Range</b>
             <input/>
             <button class="add-color-button">Generate</button>
 
